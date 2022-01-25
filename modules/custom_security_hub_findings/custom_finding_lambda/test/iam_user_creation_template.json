@@ -1,0 +1,72 @@
+{
+  "version": "0",
+  "id": "738d4514-090f-3eef-c421-1fd2e3c7f561",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.iam",
+  "account": "012345678949",
+  "time": "2021-10-21T06:24:09Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": {
+    "eventVersion": "1.08",
+    "userIdentity": {
+      "type": "AssumedRole",
+      "principalId": "AHDBHCHGCCM6I2IOPY77:your_email@domain.com",
+      "arn": "arn:aws:sts::012345678949:assumed-role/AWSReservedSSO_DevOps_jr12345c84697f04/your_email@domain.com",
+      "accountId": "012345678949",
+      "accessKeyId": "AMERQTYOJCCM5WJ0TSOQ",
+      "sessionContext": {
+        "sessionIssuer": {
+          "type": "Role",
+          "principalId": "AHDBHCHGCCM6I2IOPY77",
+          "arn": "arn:aws:iam::012345678949:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_DevOps_jr12345c84697f04",
+          "accountId": "012345678949",
+          "userName": "AWSReservedSSO_DevOps_jr12345c84697f04"
+        },
+        "webIdFederationData": {},
+        "attributes": {
+          "creationDate": "2021-10-21T06:22:21Z",
+          "mfaAuthenticated": "false"
+        }
+      }
+    },
+    "eventTime": "2021-10-21T06:24:09Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "CreateUser",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "116.24.255.13",
+    "userAgent": "console.amazonaws.com",
+    "requestParameters": {
+      "userName": "test-user",
+      "tags": [
+        {
+          "key": "Owner",
+          "value": "Testing-User"
+        }
+      ]
+    },
+    "responseElements": {
+      "user": {
+        "path": "/",
+        "userName": "test-user",
+        "userId": "AIEWNKDXYOJCCMRVXWLP4KM",
+        "arn": "arn:aws:iam::012345678949:user/test-user",
+        "createDate": "Oct 21, 2021 6:24:09 AM",
+        "tags": [
+          {
+            "key": "Owner",
+            "value": "Testing-User"
+          }
+        ]
+      }
+    },
+    "requestID": "5dc720fe-3388-e301-b9fa-90b9211e5cb1",
+    "eventID": "e66af476-d345-8902-aaf1-a8c2c0f75ae6",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "012345678949",
+    "eventCategory": "Management",
+    "sessionCredentialFromConsole": "true"
+  }
+}
