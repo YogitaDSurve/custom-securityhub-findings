@@ -1,0 +1,4 @@
+boto3==1.18.60
+botocore==1.21.60
+pytest==6.2.5
+freezegun==1.1.0
