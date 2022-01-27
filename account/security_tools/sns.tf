@@ -4,11 +4,11 @@ locals {
 }
 
 module "sns_notification_for_us_east_1" {
-source             = "../../modules/aws_sns"
-notification_email = "your_email@domain.com"
+  source             = "../../modules/aws_sns"
+  notification_email = "your_email@domain.com"
 }
 
 module "sns_notification_for_us_east_2" {
-source             = "../../modules/aws_sns"
-notification_email = "your_email@domain.com"
+  source             = "../../modules/aws_sns"
+  notification_email = "your_email@domain.com"
 }
