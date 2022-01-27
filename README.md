@@ -17,9 +17,9 @@ This repo primarily use the following services:
 
 ### Code Walkthrough
 * As the first step, we enable Security Hub in two regions using [aws_securityhub_account](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/securityhub_account).
-* Next we create [EventBridge rule]() that triggers the [Lambda function]().
-* Lambda function uses [batch_import_findings]() function by boto3 that imports the custom finding in Security Hub
-* In next step, we create one more [EventBridge rule]() that has the source of security hub and targets it to [SNS topic]()
+* Next we create [EventBridge rule](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule) that triggers the [Lambda function](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function).
+* Lambda function uses [batch_import_findings](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/securityhub.html#SecurityHub.Client.batch_import_findings) function by boto3 that imports the custom finding in Security Hub
+* In next step, we create one more [EventBridge rule](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_event_rule) that has the source of security hub and targets it to [SNS topic](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic)
 ---
 ### Buy me a coffee
 
