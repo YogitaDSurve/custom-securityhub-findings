@@ -1,13 +1,13 @@
 resource "aws_cloudwatch_event_rule" "import_findings" {
-  name        = "Import-Security-Hub-findings"
+  name = "Import-Security-Hub-findings"
   event_pattern = jsonencode({
-  "detail-type": ["AWS API Call via CloudTrail"],
-  "source": ["aws.iam"],
-  "detail": {
-    "eventSource": ["iam.amazonaws.com"],
-    "eventName": ["CreateUser"]
-  }
-})
+    "detail-type" : ["AWS API Call via CloudTrail"],
+    "source" : ["aws.iam"],
+    "detail" : {
+      "eventSource" : ["iam.amazonaws.com"],
+      "eventName" : ["CreateUser"]
+    }
+  })
 }
 
 resource "aws_cloudwatch_event_target" "lambda" {
@@ -49,8 +49,8 @@ data "aws_iam_policy_document" "lambda_iam_cu_report_role_policy" {
 }
 
 resource "aws_iam_policy" "lambda_policy" {
-  name        = "custom_finding_lambda_policy"
-  policy      = data.aws_iam_policy_document.lambda_iam_cu_report_role_policy.json
+  name   = "custom_finding_lambda_policy"
+  policy = data.aws_iam_policy_document.lambda_iam_cu_report_role_policy.json
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_role_and_policy" {
