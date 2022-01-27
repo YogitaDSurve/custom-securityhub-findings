@@ -35,7 +35,7 @@ Whether you use this project, have learned something from it, or just like it, p
 - [AWS SNS](https://docs.aws.amazon.com/sns/latest/dg/welcome.html)
 
 ----
-### sLicense
+### License
 >You can check out the full license [here](https://github.com/YogitaDSurve/custom-securityhub-findings/blob/main/LICENSE)
 
 This project is licensed under the terms of the MIT license.
