@@ -37,7 +37,7 @@ resource "aws_iam_role" "lambda_role" {
   name               = "custom_finding_lambda_role"
   assume_role_policy = data.aws_iam_policy_document.lambda_iam_assume_role_policy.json
 }
-
+#tfsec:ignore:AWS099 | We need all resources for this policy
 data "aws_iam_policy_document" "lambda_iam_cu_report_role_policy" {
   statement {
     effect = "Allow"
