@@ -7,7 +7,7 @@ locals {
 
 data "aws_iam_policy_document" "sns_topic_encryption_key_policy" {
   statement {
-    sid     = "Enable IAM User Permissions"
+    sid     = "EnableIAMUserPermissions"
     effect  = "Allow"
     actions = ["kms:*"]
     principals {
